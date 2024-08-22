@@ -403,7 +403,7 @@ For example:
      -
    * - ofedDriver.version
      - string
-     - `"24.07-0.6.0.0-1"`
+     - `"24.07-0.6.1.0-0"`
      - NVIDIA DOCA Driver version.
 
 ===============================================
