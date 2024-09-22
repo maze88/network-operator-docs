@@ -2,6 +2,9 @@ name: Documentation CI
 
 on:
   workflow_call:
+    secrets:
+      token:
+        required: true
     inputs:
       git_tag:
         type: string
@@ -25,16 +28,18 @@ jobs:
     - uses: actions/checkout@v4
       with:
         repository: ${{ github.repository_owner }}/network-operator-docs  # repo must be explicitly set here for workflow calling to behave correctly
-        token: ${{ inputs.token || secrets.GH_TOKEN_NVIDIA_CI_CD }}  # token must be explicitly set here for push to work in following step
+        token: ${{ secrets.token || secrets.GH_TOKEN_NVIDIA_CI_CD }}  # token must be explicitly set here for push to work in following step
     - name: Make docs
       run: |
         make helm-docs generate-docs-versions-var
     - name: Close any existing documentation PRs
+      if: false  # TODO: test upstream workflow triggering then remove line
       run: |
         for pr_number in $(gh pr list --search "$PR_TITLE_PREFIX" --json number --jq ".[].number"); do
           gh pr close $pr_number
         done
     - name: Create PR
+      if: false  # TODO: test upstream workflow triggering then remove line
       env:
         DOWNSTREAM_REPO_OWNER: nvidia-ci-cd
         DOWNSTREAM_FEATURE_BRANCH: update-docs-for-${{ env.TAG }}
