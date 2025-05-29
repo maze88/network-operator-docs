@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Customization Options &mdash; NVIDIA Network Operator v24.7.0 documentation</title>
+  <title>Customization Options &mdash; NVIDIA Network Operator v25.04.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
@@ -61,10 +61,12 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Customization Options and CRDs</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="helm.html">Helm Chart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="crds.html">CRDs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cr-full-example.html">NicClusterPolicy Reference Example</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../life-cycle-management.html">Life Cycle Management</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../advanced-configurations.html">Advanced Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/advanced.html">Advanced Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../licenses.html">Legal Notices and 3rd Party Licenses</a></li>
 </ul>
 
         </div>
@@ -111,19 +113,8 @@
 <li class="toctree-l2"><a class="reference internal" href="helm.html#nfd-labels">NFD labels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="helm.html#node-feature-discovery">Node Feature Discovery</a></li>
 <li class="toctree-l2"><a class="reference internal" href="helm.html#sr-iov-network-operator">SR-IOV Network Operator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="helm.html#container-resources">Container Resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="helm.html#nvidia-doca-driver">NVIDIA DOCA Driver</a></li>
-<li class="toctree-l2"><a class="reference internal" href="helm.html#nvidia-doca-driver-driver-environment-variables">NVIDIA DOCA Driver Driver Environment Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="helm.html#rdma-shared-device-plugin">RDMA Shared Device Plugin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="helm.html#rdma-device-plugin-resource-configurations">RDMA Device Plugin Resource Configurations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="helm.html#sr-iov-network-device-plugin">SR-IOV Network Device Plugin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="helm.html#sr-iov-network-device-plugin-resource-configuration">SR-IOV Network Device Plugin Resource Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="helm.html#ib-kubernetes">IB Kubernetes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="helm.html#ufm-secret">UFM Secret</a></li>
-<li class="toctree-l2"><a class="reference internal" href="helm.html#nvidia-ipam-plugin">NVIDIA IPAM Plugin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="helm.html#secondary-network">Secondary Network</a></li>
-<li class="toctree-l2"><a class="reference internal" href="helm.html#nvidia-nic-feature-discovery">NVIDIA NIC Feature Discovery</a></li>
-<li class="toctree-l2"><a class="reference internal" href="helm.html#doca-telemetry-service">DOCA Telemetry Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="helm.html#nic-configuration-operator">NIC Configuration Operator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="helm.html#maintenance-operator">Maintenance Operator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="helm.html#helm-customization-file">Helm customization file</a></li>
 </ul>
 </li>
@@ -154,16 +145,20 @@
 <li class="toctree-l3"><a class="reference internal" href="crds.html#nicclusterpolicy">NicClusterPolicy</a></li>
 <li class="toctree-l3"><a class="reference internal" href="crds.html#nicclusterpolicyspec">NicClusterPolicySpec</a></li>
 <li class="toctree-l3"><a class="reference internal" href="crds.html#nicclusterpolicystatus">NicClusterPolicyStatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crds.html#nicconfigurationoperatorspec">NicConfigurationOperatorSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crds.html#nicfirmwarestoragespec">NicFirmwareStorageSpec</a></li>
 <li class="toctree-l3"><a class="reference internal" href="crds.html#ofeddriverspec">OFEDDriverSpec</a></li>
 <li class="toctree-l3"><a class="reference internal" href="crds.html#podprobespec">PodProbeSpec</a></li>
 <li class="toctree-l3"><a class="reference internal" href="crds.html#resourcerequirements">ResourceRequirements</a></li>
 <li class="toctree-l3"><a class="reference internal" href="crds.html#secondarynetworkspec">SecondaryNetworkSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crds.html#spectrumxoperatorspec">SpectrumXOperatorSpec</a></li>
 <li class="toctree-l3"><a class="reference internal" href="crds.html#state-string-alias">State (<code class="docutils literal notranslate"><span class="pre">string</span></code> alias)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="crds.html#waitforcompletionspec">WaitForCompletionSpec</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="cr-full-example.html">NicClusterPolicy Reference Example</a></li>
 </ul>
 </div>
 </section>
@@ -176,8 +171,8 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2024, NVIDIA.
-      <span class="lastupdated">Last updated on Aug 22, 2024.
+    <p>&#169; Copyright 2025, NVIDIA.
+      <span class="lastupdated">Last updated on May 29, 2025.
       </span></p>
   </div>
 

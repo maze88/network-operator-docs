@@ -4,29 +4,30 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Advanced Configurations &mdash; NVIDIA Network Operator v24.7.0 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
-      <link rel="stylesheet" href="_static/omni-style.css" type="text/css" />
-      <link rel="stylesheet" href="_static/api-styles.css" type="text/css" />
-    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <title>Proxy &amp; Air-Gapped Environments &mdash; NVIDIA Network Operator v25.04.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/omni-style.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/api-styles.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
   <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
+    <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/mermaid-init.js"></script>
-        <script src="_static/design-tabs.js"></script>
-        <script src="_static/version.js"></script>
-        <script src="_static/social-media.js"></script>
-    <script src="_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Life Cycle Management" href="life-cycle-management.html" />
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/mermaid-init.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+        <script src="../_static/version.js"></script>
+        <script src="../_static/social-media.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="NVIDIA DOCA Driver Container" href="doca-drivers.html" />
+    <link rel="prev" title="Advanced Configurations" href="advanced.html" />
  
 
 
@@ -39,12 +40,12 @@
         <div class="wy-side-nav-search" >
 
 
-<a href="index.html">
-  <img src="_static/nvidia-logo-white.png" class="logo" alt="Logo"/>
+<a href="../index.html">
+  <img src="../_static/nvidia-logo-white.png" class="logo" alt="Logo"/>
 </a>
 
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -53,13 +54,20 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">NVIDIA Network Operator</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="release-notes.html">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="platform-support.html">Platform Support</a></li>
-<li class="toctree-l1"><a class="reference internal" href="getting-started-kubernetes.html">Getting Started with Kubernetes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="getting-started-openshift.html">Getting Started with Red Hat OpenShift</a></li>
-<li class="toctree-l1"><a class="reference internal" href="customizations/customization.html">Customization Options and CRDs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="life-cycle-management.html">Life Cycle Management</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Advanced Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release-notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../platform-support.html">Platform Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started-kubernetes.html">Getting Started with Kubernetes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started-openshift.html">Getting Started with Red Hat OpenShift</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../customizations/customization.html">Customization Options and CRDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../life-cycle-management.html">Life Cycle Management</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="advanced.html">Advanced Configurations</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Proxy &amp; Air-gapped</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doca-drivers.html">DOCA Driver Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced-configurations.html">Other Advanced Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="images-sha256.html">Container Images Digests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../licenses.html">Legal Notices and 3rd Party Licenses</a></li>
 </ul>
 
         </div>
@@ -68,7 +76,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">NVIDIA Network Operator</a>
+          <a href="../index.html">NVIDIA Network Operator</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -77,9 +85,10 @@
   <ul class="wy-breadcrumbs">
 
 
-<li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+<li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
   
-<li>Advanced Configurations</li>
+    <li><a href="advanced.html">Advanced Configurations</a> &raquo;</li>
+<li>Proxy &amp; Air-Gapped Environments</li>
 
       <li class="wy-breadcrumbs-aside">
       </li>
@@ -94,69 +103,28 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="advanced-configurations">
-<h1>Advanced Configurations<a class="headerlink" href="#advanced-configurations" title="Permalink to this headline"></a></h1>
+  <section id="proxy-air-gapped-environments">
+<h1>Proxy &amp; Air-Gapped Environments<a class="headerlink" href="#proxy-air-gapped-environments" title="Permalink to this headline"></a></h1>
 <div class="contents local topic" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#network-operator-deployment-with-admission-controller" id="id3">Network Operator Deployment with Admission Controller</a></p></li>
-<li><p><a class="reference internal" href="#network-operator-deployment-with-pod-security-admission" id="id4">Network Operator Deployment with Pod Security Admission</a></p></li>
-<li><p><a class="reference internal" href="#network-operator-deployment-in-a-proxy-environment" id="id5">Network Operator Deployment in a Proxy Environment</a></p>
+<li><p><a class="reference internal" href="#network-operator-deployment-in-a-proxy-environment" id="id1">Network Operator Deployment in a Proxy Environment</a></p>
 <ul>
-<li><p><a class="reference internal" href="#prerequisites" id="id6">Prerequisites</a></p></li>
-<li><p><a class="reference internal" href="#http-proxy-configuration-for-openshift" id="id7">HTTP Proxy Configuration for Openshift</a></p></li>
-<li><p><a class="reference internal" href="#http-proxy-configuration" id="id8">HTTP Proxy Configuration</a></p></li>
+<li><p><a class="reference internal" href="#prerequisites" id="id2">Prerequisites</a></p></li>
+<li><p><a class="reference internal" href="#http-proxy-configuration-for-openshift" id="id3">HTTP Proxy Configuration for Openshift</a></p></li>
+<li><p><a class="reference internal" href="#http-proxy-configuration" id="id4">HTTP Proxy Configuration</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#network-operator-deployment-in-an-air-gapped-environment" id="id9">Network Operator Deployment in an Air-gapped Environment</a></p>
+<li><p><a class="reference internal" href="#network-operator-deployment-in-an-air-gapped-environment" id="id5">Network Operator Deployment in an Air-gapped Environment</a></p>
 <ul>
-<li><p><a class="reference internal" href="#local-image-registry" id="id10">Local Image Registry</a></p></li>
-<li><p><a class="reference internal" href="#pulling-and-pushing-container-images-to-a-local-registry" id="id11">Pulling and Pushing Container Images to a Local Registry</a></p></li>
-<li><p><a class="reference internal" href="#local-package-repository" id="id12">Local Package Repository</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#precompiled-container-build-instructions-for-doca-drivers" id="id13">Precompiled Container Build Instructions for DOCA Drivers</a></p>
-<ul>
-<li><p><a class="reference internal" href="#id1" id="id14">Prerequisites</a></p></li>
-<li><p><a class="reference internal" href="#dockerfile-overview" id="id15">Dockerfile Overview</a></p></li>
-<li><p><a class="reference internal" href="#common-mandatory-build-parameters" id="id16">Common mandatory build parameters</a></p></li>
-<li><p><a class="reference internal" href="#rhel-specific-build-parameters" id="id17">RHEL specific build parameters</a></p></li>
-<li><p><a class="reference internal" href="#rhcos-specific-build-parameters" id="id18">RHCOS specific build parameters</a></p></li>
+<li><p><a class="reference internal" href="#local-image-registry" id="id6">Local Image Registry</a></p></li>
+<li><p><a class="reference internal" href="#pulling-and-pushing-container-images-to-a-local-registry" id="id7">Pulling and Pushing Container Images to a Local Registry</a></p></li>
+<li><p><a class="reference internal" href="#configuring-local-registry-tls-cert" id="id8">Configuring Local Registry TLS Cert</a></p></li>
+<li><p><a class="reference internal" href="#local-package-repository" id="id9">Local Package Repository</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
-<section id="network-operator-deployment-with-admission-controller">
-<h2>Network Operator Deployment with Admission Controller<a class="headerlink" href="#network-operator-deployment-with-admission-controller" title="Permalink to this headline"></a></h2>
-<p>The Admission Controller can be optionally included as part of the Network Operator installation process. It has the capability to validate supported Custom Resource Definitions (CRDs), which currently include NicClusterPolicy and HostDeviceNetwork.
-By default, the deployment of the admission controller is disabled. To enable it, you must set <code class="docutils literal notranslate"><span class="pre">operator.admissionController.enabled</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
-<p>Enabling the admission controller provides you with two options for managing certificates. You can either utilize the <a class="reference external" href="https://cert-manager.io/docs/installation/">cert-manager</a> for generating a self-signed certificate automatically, or, alternatively, provide your own self-signed certificate.</p>
-<p>To use cert-manager, ensure that <code class="docutils literal notranslate"><span class="pre">operator.admissionController.useCertManager</span></code> is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Additionally, make sure that you deploy the cert-manager before initiating the Network Operator deployment.</p>
-<p>If you prefer not to use the cert-manager, set <code class="docutils literal notranslate"><span class="pre">operator.admissionController.useCertManager</span></code> to <code class="docutils literal notranslate"><span class="pre">false</span></code>, and then provide your custom certificate and key using <code class="docutils literal notranslate"><span class="pre">operator.admissionController.certificate.tlsCrt</span></code> and <code class="docutils literal notranslate"><span class="pre">operator.admissionController.certificate.tlsKey</span></code>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>When using your own certificate, the certificate must be valid for <code class="docutils literal notranslate"><span class="pre">&lt;Release_Name&gt;-webhook-service.&lt;Release_Namespace&gt;.svc</span></code>, e.g. <code class="docutils literal notranslate"><span class="pre">network-operator-webhook-service.nvidia-network-operator.svc</span></code>.</p>
-</div>
-</section>
-<section id="network-operator-deployment-with-pod-security-admission">
-<h2>Network Operator Deployment with Pod Security Admission<a class="headerlink" href="#network-operator-deployment-with-pod-security-admission" title="Permalink to this headline"></a></h2>
-<p>The <a class="reference external" href="https://kubernetes.io/docs/concepts/security/pod-security-admission/">Pod Security admission</a> controller replaces PodSecurityPolicy, enforcing predefined Pod Security Standards by adding a label to a namespace.</p>
-<p>There are three levels defined by the <a class="reference external" href="https://kubernetes.io/docs/concepts/security/pod-security-standards">Pod Security Standards</a> : <code class="docutils literal notranslate"><span class="pre">privileged</span></code> , <code class="docutils literal notranslate"><span class="pre">baseline</span></code> and <code class="docutils literal notranslate"><span class="pre">restricted</span></code>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>In case you wish to enforce a PSA to the Network Operator namespace, the <code class="docutils literal notranslate"><span class="pre">privileged</span></code> level is required. Enforcing <code class="docutils literal notranslate"><span class="pre">baseline</span></code> or <code class="docutils literal notranslate"><span class="pre">restricted</span></code> levels will prevent the creation of required Network Operator pods.</p>
-</div>
-<p>If required, enforce PSA privileged level on the Network Operator namespace by running:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl label --overwrite ns nvidia-network-operator  pod-security.kubernetes.io/enforce<span class="o">=</span>privileged
-</pre></div>
-</div>
-<p>In case that baseline or restricted levels are being enforced on the Network Operator namespace, events for pods creation failures will be triggered:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl get events -n nvidia-network-operator --field-selector <span class="nv">reason</span><span class="o">=</span>FailedCreate
-LAST SEEN TYPE    REASON       OBJECT                         MESSAGE
-2m36s     Warning FailedCreate daemonset/mofed-ubuntu22.04-ds Error creating: pods <span class="s2">&quot;mofed-ubuntu22.04-ds-rwmgs&quot;</span> is forbidden: violates PodSecurity <span class="s2">&quot;baseline:latest&quot;</span>: host namespaces <span class="o">(</span><span class="nv">hostNetwork</span><span class="o">=</span><span class="nb">true</span><span class="o">)</span>, hostPath volumes <span class="o">(</span>volumes <span class="s2">&quot;run-mlnx-ofed&quot;</span>, <span class="s2">&quot;etc-network&quot;</span>, <span class="s2">&quot;host-etc&quot;</span>, <span class="s2">&quot;host-usr&quot;</span>, <span class="s2">&quot;host-udev&quot;</span><span class="o">)</span>, privileged <span class="o">(</span>container <span class="s2">&quot;mofed-container&quot;</span> must not <span class="nb">set</span> securityContext.privileged<span class="o">=</span><span class="nb">true</span><span class="o">)</span>
-</pre></div>
-</div>
-</section>
 <section id="network-operator-deployment-in-a-proxy-environment">
 <h2>Network Operator Deployment in a Proxy Environment<a class="headerlink" href="#network-operator-deployment-in-a-proxy-environment" title="Permalink to this headline"></a></h2>
 <p>This section describes how to successfully deploy the Network Operator in clusters behind an HTTP Proxy. By default, the Network Operator requires internet access for the following reasons:</p>
@@ -209,7 +177,7 @@ By default, the Network Operator requires internet access for the following reas
 <blockquote>
 <div><ul class="simple">
 <li><p>The container images must be pulled during the Network Operator installation.</p></li>
-<li><p>The OFED driver container must download several OS packages prior to the driver installation.</p></li>
+<li><p>The DOCA Driver container must download several OS packages prior to the driver installation.</p></li>
 </ul>
 </div></blockquote>
 <p>To address these requirements, it may be necessary to create a local image registry and/or a local package repository, so that the necessary images and packages will be available for your cluster.
@@ -222,7 +190,74 @@ To allow Network Operator to work with a local registry, users can specify local
 </section>
 <section id="pulling-and-pushing-container-images-to-a-local-registry">
 <h3>Pulling and Pushing Container Images to a Local Registry<a class="headerlink" href="#pulling-and-pushing-container-images-to-a-local-registry" title="Permalink to this headline"></a></h3>
-<p>To pull the correct images from the NVIDIA registry, you can leverage the fields <code class="docutils literal notranslate"><span class="pre">repository</span></code>, <code class="docutils literal notranslate"><span class="pre">image</span></code> and <code class="docutils literal notranslate"><span class="pre">version</span></code> specified in the <code class="docutils literal notranslate"><span class="pre">values.yaml</span></code> file.</p>
+<p>To pull the correct images from the NVIDIA registry, you can leverage the fields <code class="docutils literal notranslate"><span class="pre">repository</span></code>, <code class="docutils literal notranslate"><span class="pre">image</span></code> and <code class="docutils literal notranslate"><span class="pre">version</span></code> specified in the <code class="docutils literal notranslate"><span class="pre">values.yaml</span></code> file or in the <a class="reference internal" href="images-sha256.html#container-images-digest"><span class="std std-ref">NVIDIA Network Operator Container Images</span></a> section.</p>
+<p>NicClusterPolicy supports use of image container digest in the <cite>version</cite> field, except for DOCA driver.</p>
+<p>There is one caveat with regards to the DOCA driver image. The version field must be appended by the OS name and Architecture running on the worker node.</p>
+<p>For example for DOCA driver version 25.04-0.6.1.0-2, the tag for Ubuntu 24.04 with X86 architecture is “25.04-0.6.1.0-2-ubuntu24.04-amd64”.
+Available DOCA driver image tags can be found at <a class="reference external" href="https://catalog.ngc.nvidia.com/orgs/nvidia/teams/mellanox/containers/doca-driver/tags">NGC</a>.</p>
+<p>In case of local registry required authentication, make sure to create a pull secret and configure in NicClusterPolicy accordingly.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>NVIDIA Network Operator communicates with the Image Registry configured for the DOCA Driver in the NICClusterPolicy to list the available tags.
+Specifying pull secret is required in the NicClusterPolicy DOCA Driver section, even if global container access credentials are configured on nodes.</p>
+</div>
+</section>
+<section id="configuring-local-registry-tls-cert">
+<h3>Configuring Local Registry TLS Cert<a class="headerlink" href="#configuring-local-registry-tls-cert" title="Permalink to this headline"></a></h3>
+<p>NVIDIA Network Operator communicates with the Image Registry configured for the DOCA Driver in the NICClusterPolicy to list the available tags.
+This is required to verify the availability of precompiled DOCA Driver container images.</p>
+<p>If the Image Registry uses a TLS certificate that is not issued by a well-known Certificate Authority (CA), it is required to configure the NVIDIA Network Operator with the Certificate.</p>
+<p>Fetch the TLS Certificates from the Image Registry server and save them in the <cite>ca.crt</cite> file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">REGISTRY_HOST</span><span class="o">=</span>myregistry.example.com
+<span class="nb">export</span> <span class="nv">REGISTRY_PORT</span><span class="o">=</span><span class="m">5000</span>
+openssl s_client -showcerts -connect <span class="si">${</span><span class="nv">REGISTRY_HOST</span><span class="si">}</span>:<span class="si">${</span><span class="nv">REGISTRY_PORT</span><span class="si">}</span> &lt;/dev/null <span class="m">2</span>&gt;/dev/null <span class="p">|</span> awk <span class="s1">&#39;/-----BEGIN CERTIFICATE-----/,/-----END CERTIFICATE-----/&#39;</span> &gt; ca.crt
+</pre></div>
+</div>
+<p>Create a ConfigMap containing the TLS Certificates from the <cite>ca.crt file</cite>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl create configmap custom-registry-cert --from-file<span class="o">=</span>&lt;external_registry&gt;<span class="o">=</span>ca.crt -n nvidia-network-operator
+</pre></div>
+</div>
+<p>In OpenShift, update the <cite>nvidia-network-operator</cite> Subscription by adding the following <cite>config</cite> under <cite>spec</cite>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl apply -f - <span class="s">&lt;&lt;EOF</span>
+<span class="s">apiVersion: operators.coreos.com/v1alpha1</span>
+<span class="s">kind: Subscription</span>
+<span class="s">metadata:</span>
+<span class="s">  name: nvidia-network-operator</span>
+<span class="s">  namespace: nvidia-network-operator</span>
+<span class="s">spec:</span>
+<span class="s">  config:</span>
+<span class="s">    volumes:</span>
+<span class="s">      - configMap:</span>
+<span class="s">          name: custom-registry-cert</span>
+<span class="s">        name: custom-registry-ca</span>
+<span class="s">    volumeMounts:</span>
+<span class="s">      - mountPath: /etc/pki/tls/certs/</span>
+<span class="s">        name: custom-registry-ca</span>
+<span class="s">EOF</span>
+</pre></div>
+</div>
+<p>In Kubernetes, update the <cite>network-operator</cite> Deployment’s volumes by running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl apply -f - <span class="s">&lt;&lt;EOF</span>
+<span class="s">apiVersion: apps/v1</span>
+<span class="s">kind: Deployment</span>
+<span class="s">metadata:</span>
+<span class="s">  name: network-operator</span>
+<span class="s">  namespace: nvidia-network-operator</span>
+<span class="s">spec:</span>
+<span class="s">  template:</span>
+<span class="s">    spec:</span>
+<span class="s">      volumes:</span>
+<span class="s">        - configMap:</span>
+<span class="s">            name: custom-registry-cert</span>
+<span class="s">          name: custom-registry-ca</span>
+<span class="s">      containers:</span>
+<span class="s">        - name: network-operator</span>
+<span class="s">          volumeMounts:</span>
+<span class="s">            - mountPath: /etc/pki/tls/certs/</span>
+<span class="s">              name: custom-registry-ca</span>
+<span class="s">EOF</span>
+</pre></div>
+</div>
 </section>
 <section id="local-package-repository">
 <h3>Local Package Repository<a class="headerlink" href="#local-package-repository" title="Permalink to this headline"></a></h3>
@@ -230,7 +265,7 @@ To allow Network Operator to work with a local registry, users can specify local
 <p class="admonition-title">Warning</p>
 <p>The instructions below are provided as reference examples to set up a local package repository for NVIDIA Network Operator.</p>
 </div>
-<p>The OFED driver container deployed as part of the Network Operator requires certain packages to be available for the driver installation. In restricted internet access or air-gapped installations, users are required to create a local mirror repository for their OS distribution, and make the following packages available:</p>
+<p>The DOCA Driver container deployed as part of the Network Operator requires certain packages to be available for the driver installation. In restricted internet access or air-gapped installations, users are required to create a local mirror repository for their OS distribution, and make the following packages available:</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="nl">ubuntu</span><span class="p">:</span><span class="w"></span>
 <span class="w">   </span><span class="n">linux</span><span class="o">-</span><span class="n">headers</span><span class="o">-</span><span class="n">$</span><span class="p">{</span><span class="n">KERNEL_VERSION</span><span class="p">}</span><span class="w"></span>
 <span class="w">   </span><span class="n">linux</span><span class="o">-</span><span class="n">modules</span><span class="o">-</span><span class="n">$</span><span class="p">{</span><span class="n">KERNEL_VERSION</span><span class="p">}</span><span class="w"></span>
@@ -350,152 +385,6 @@ To allow Network Operator to work with a local registry, users can specify local
 </div>
 </section>
 </section>
-<section id="precompiled-container-build-instructions-for-doca-drivers">
-<h2>Precompiled Container Build Instructions for DOCA Drivers<a class="headerlink" href="#precompiled-container-build-instructions-for-doca-drivers" title="Permalink to this headline"></a></h2>
-<section id="id1">
-<h3>Prerequisites<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
-<p>Before you begin, ensure that you have the following prerequisites:</p>
-<section id="common">
-<h4>Common<a class="headerlink" href="#common" title="Permalink to this headline"></a></h4>
-<ul class="simple">
-<li><p>Docker (Ubuntu) / Podman (RH) installed on your build system.</p></li>
-<li><p>Web access to NVIDIA NIC drivers sources. Latest NIC drivers published at <a class="reference external" href="https://network.nvidia.com/products/infiniband-drivers/linux/mlnx_ofed/">NIC drivers download center</a>, for example: <a class="reference external" href="https://www.mellanox.com/downloads/ofed/MLNX_OFED-24.04-0.6.6.0/MLNX_OFED_SRC-debian-24.04-0.6.6.0-0.tgz">https://www.mellanox.com/downloads/ofed/MLNX_OFED-24.04-0.6.6.0/MLNX_OFED_SRC-debian-24.04-0.6.6.0-0.tgz</a></p></li>
-</ul>
-</section>
-<section id="rhel">
-<h4>RHEL<a class="headerlink" href="#rhel" title="Permalink to this headline"></a></h4>
-<ul class="simple">
-<li><p>Active subscription and login credentials for <a class="reference external" href="https://registry.redhat.io">registry.redhat.io</a>. To build RHEL based container from official repository, you need to log in to <a class="reference external" href="https://registry.redhat.io">registry.redhat.io</a>, run the following command:</p></li>
-</ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>podman login registry.redhat.io --username<span class="o">=</span><span class="si">${</span><span class="nv">RH_USERNAME</span><span class="si">}</span> --password<span class="o">=</span><span class="si">${</span><span class="nv">RH_PASSWORD</span><span class="si">}</span>
-</pre></div>
-</div>
-<p>Replace <cite>RH_USERNAME</cite> and <cite>RH_PASSWORD</cite> with your Red Hat account username and password.</p>
-</section>
-<section id="rhcos">
-<h4>RHCOS<a class="headerlink" href="#rhcos" title="Permalink to this headline"></a></h4>
-<ul class="simple">
-<li><p>Install <a class="reference external" href="https://docs.openshift.com/container-platform/latest/cli_reference/openshift_cli/getting-started-cli.html">oc</a> CLI tool.</p></li>
-<li><p>Download OpenShift <a class="reference external" href="https://console.redhat.com/openshift/install/pull-secret">pull secret</a>.</p></li>
-</ul>
-</section>
-</section>
-<section id="dockerfile-overview">
-<h3>Dockerfile Overview<a class="headerlink" href="#dockerfile-overview" title="Permalink to this headline"></a></h3>
-<p>To build the precompiled container, the Dockerfile is constructed in a multistage fashion.
-This approach is used to optimize the resulting container image size and reduce the number of dependencies included in the final image.</p>
-<p>The Dockerfile consists of the following stages:</p>
-<ol class="arabic simple">
-<li><p><strong>Base Image Update</strong>: The base image is updated and common requirements are installed. This stage sets up the basic environment for the subsequent stages.</p></li>
-<li><p><strong>Download Driver Sources</strong>: This stage downloads the Mellanox OFED driver sources to the specified path. It prepares the necessary files for the driver build process.</p></li>
-<li><p><strong>Build Driver</strong>: The driver is built using the downloaded sources and installed on the container. This stage ensures that the driver is compiled and configured correctly for the target system.</p></li>
-<li><p><strong>Install precompiled driver</strong>: Finally, the precompiled driver is installed on clean container. This stage sets up the environment to run the NVIDIA NIC drivers on the target system.</p></li>
-</ol>
-</section>
-<section id="common-mandatory-build-parameters">
-<h3>Common mandatory build parameters<a class="headerlink" href="#common-mandatory-build-parameters" title="Permalink to this headline"></a></h3>
-<p>Before building the container, you need to provide following parameters as <cite>build-arg</cite> for container build:</p>
-<ol class="arabic simple">
-<li><p><cite>D_OS</cite>: The Linux distribution (e.g., ubuntu22.04 / rhel9.2)</p></li>
-<li><p><cite>D_ARCH</cite>: Compiled Architecture</p></li>
-<li><p><cite>D_BASE_IMAGE</cite>: Base container image</p></li>
-<li><p><cite>D_KERNEL_VER</cite>: The target kernel version (e.g., 5.15.0-25-generic / 5.14.0-284.32.1.el9_2.x86_64)</p></li>
-<li><p><cite>D_OFED_VERSION</cite>: NVIDIA NIC drivers version (e.g., 24.01-0.3.3.1)</p></li>
-</ol>
-<p><strong>NOTE:</strong> Check desired NVIDIA NIC drivers sources[^1] availability for designated container OS, only versions available on download page can be utilized</p>
-<p><strong>NOTE:</strong> For proper Network Operator functionality container tag name must be in following pattern: <strong>driver_ver-container_ver-kernel_ver-os-arch</strong>. For example: 24.01-0.3.3.1-0-5.15.0-25-generic-ubuntu22.04-amd64</p>
-</section>
-<section id="rhel-specific-build-parameters">
-<h3>RHEL specific build parameters<a class="headerlink" href="#rhel-specific-build-parameters" title="Permalink to this headline"></a></h3>
-<ol class="arabic simple">
-<li><p><cite>D_BASE_IMAGE</cite>: DriverToolKit container image</p></li>
-</ol>
-<p><strong>NOTE:</strong> DTK (DriverToolKit) is tightly coupled with specific kernel versions, verify match between kernel version to compile drivers for, versus DTK image.</p>
-<ol class="arabic simple" start="2">
-<li><p><cite>D_FINAL_BASE_IMAGE</cite>: Final container image, to install compiled driver</p></li>
-</ol>
-<p>For more details regarding DTK please read <a class="reference external" href="https://docs.openshift.com/container-platform/4.15/hardware_enablement/psap-driver-toolkit.html#pulling-the-driver-toolkit-from-payload">official documentation</a>.</p>
-</section>
-<section id="rhcos-specific-build-parameters">
-<h3>RHCOS specific build parameters<a class="headerlink" href="#rhcos-specific-build-parameters" title="Permalink to this headline"></a></h3>
-<ol class="arabic simple">
-<li><p><cite>D_BASE_IMAGE</cite>: DriverToolKit container image</p></li>
-</ol>
-<p><strong>NOTE:</strong> DTK (DriverToolKit) is tightly coupled with specific kernel version for an OpenShift release.</p>
-<p>In order to get the specific DTK container image for a specific OpenShift release, run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>oc adm release info &lt;OCP_VERSION&gt; --image-for<span class="o">=</span>driver-toolkit
-</pre></div>
-</div>
-<p>For example, for OpenShift 4.16.0:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>oc adm release info <span class="m">4</span>.16.0 --image-for<span class="o">=</span>driver-toolkit
-quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:dde3cd6a75d865a476aa7e1cab6fa8d97742401e87e0d514f3042c3a881e301f
-</pre></div>
-</div>
-<p>Then pull the DTK image locally using your pull-secret:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>podman pull --authfile<span class="o">=</span>/path/to/pull-secret.txt docker://quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:dde3cd6a75d865a476aa7e1cab6fa8d97742401e87e0d514f3042c3a881e301f
-</pre></div>
-</div>
-<ol class="arabic simple" start="2">
-<li><p><cite>D_FINAL_BASE_IMAGE</cite>: Final container image, to install compiled driver</p></li>
-<li><p><cite>D_KERNEL_VER</cite>: CoreOS kernel versions for OpenShift are listed <a class="reference external" href="https://access.redhat.com/solutions/7077108">here</a>.</p></li>
-</ol>
-<section id="rhel-example">
-<h4>RHEL example<a class="headerlink" href="#rhel-example" title="Permalink to this headline"></a></h4>
-<p>To build RHEL-based image please use provided <a class="reference download internal" download="" href="_downloads/663bbb4b3213d52bc9a144e44cdbae7e/RHEL_Dockerfile"><code class="xref download docutils literal notranslate"><span class="pre">Dockerfile</span></code></a>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>podman build <span class="se">\</span>
- --build-arg <span class="nv">D_OS</span><span class="o">=</span>rhel9.2 <span class="se">\</span>
- --build-arg <span class="nv">D_ARCH</span><span class="o">=</span>x86_64 <span class="se">\</span>
- --build-arg <span class="nv">D_KERNEL_VER</span><span class="o">=</span><span class="m">5</span>.14.0-284.32.1.el9_2.x86_64 <span class="se">\</span>
- --build-arg <span class="nv">D_OFED_VERSION</span><span class="o">=</span><span class="m">24</span>.01-0.3.3.1 <span class="se">\</span>
- --build-arg <span class="nv">D_BASE_IMAGE</span><span class="o">=</span><span class="s2">&quot;registry.redhat.io/openshift4/driver-toolkit-rhel9:v4.13.0-202309112001.p0.gd719bdc.assembly.stream&quot;</span> <span class="se">\</span>
- --build-arg <span class="nv">D_FINAL_BASE_IMAGE</span><span class="o">=</span>registry.access.redhat.com/ubi9/ubi:latest <span class="se">\</span>
- --tag <span class="m">24</span>.04-0.6.6.0-0-5.14.0-284.32.1.el9_2-rhel9.2-amd64 <span class="se">\</span>
- -f RHEL_Dockerfile <span class="se">\</span>
- --target precompiled .
-</pre></div>
-</div>
-</section>
-<section id="rhcos-example">
-<h4>RHCOS example<a class="headerlink" href="#rhcos-example" title="Permalink to this headline"></a></h4>
-<p>To build RHCOS based image please use provided <a class="reference download internal" download="" href="_downloads/663bbb4b3213d52bc9a144e44cdbae7e/RHEL_Dockerfile"><code class="xref download docutils literal notranslate"><span class="pre">Dockerfile</span></code></a>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>podman build <span class="se">\</span>
- --build-arg <span class="nv">D_OS</span><span class="o">=</span>rhcos4.16 <span class="se">\</span>
- --build-arg <span class="nv">D_ARCH</span><span class="o">=</span>x86_64 <span class="se">\</span>
- --build-arg <span class="nv">D_KERNEL_VER</span><span class="o">=</span><span class="m">5</span>.14.0-427.22.1.el9_4.x86_64 <span class="se">\</span>
- --build-arg <span class="nv">D_OFED_VERSION</span><span class="o">=</span><span class="m">24</span>.01-0.3.3.1 <span class="se">\</span>
- --build-arg <span class="nv">D_BASE_IMAGE</span><span class="o">=</span><span class="s2">&quot;quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:dde3cd6a75d865a476aa7e1cab6fa8d97742401e87e0d514f3042c3a881e301f&quot;</span> <span class="se">\</span>
- --build-arg <span class="nv">D_FINAL_BASE_IMAGE</span><span class="o">=</span>registry.access.redhat.com/ubi9/ubi:9.4 <span class="se">\</span>
- --tag <span class="m">24</span>.01-0.3.3.1-0-5.14.0-427.22.1.el9_4.x86_64-rhcos4.16-amd64 <span class="se">\</span>
- -f RHEL_Dockerfile <span class="se">\</span>
- --target precompiled .
-</pre></div>
-</div>
-</section>
-<section id="ubuntu-example">
-<h4>Ubuntu example<a class="headerlink" href="#ubuntu-example" title="Permalink to this headline"></a></h4>
-<p>To build RHEL-based image please use provided <a class="reference download internal" download="" href="_downloads/4a5f0a92535329b1cb793f9f614b3384/Ubuntu_Dockerfile"><code class="xref download docutils literal notranslate"><span class="pre">Dockerfile</span></code></a>:.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker build <span class="se">\</span>
- --build-arg <span class="nv">D_OS</span><span class="o">=</span>ubuntu22.04 <span class="se">\</span>
- --build-arg <span class="nv">D_ARCH</span><span class="o">=</span>x86_64 <span class="se">\</span>
- --build-arg <span class="nv">D_BASE_IMAGE</span><span class="o">=</span>ubuntu:24.04 <span class="se">\</span>
- --build-arg <span class="nv">D_KERNEL_VER</span><span class="o">=</span><span class="m">5</span>.15.0-25-generic <span class="se">\</span>
- --build-arg <span class="nv">D_OFED_VERSION</span><span class="o">=</span><span class="m">24</span>.01-0.3.3.1 <span class="se">\</span>
- --tag <span class="m">24</span>.01-0.3.3.1-0-5.15.0-25-generic-ubuntu22.04-amd64 <span class="se">\</span>
- -f Ubuntu_Dockerfile <span class="se">\</span>
- --target precompiled .
-</pre></div>
-</div>
-<p><strong>NOTE:</strong> Dockerfiles contain default build parameters, which may fail build proccess on your system if not overridden.</p>
-<p><strong>NOTE:</strong> Entrypoint script <a class="reference download internal" download="" href="_downloads/d77d407abaea8c0b58a2c2db5a3ebba9/entrypoint.sh"><code class="xref download docutils literal notranslate"><span class="pre">download</span></code></a></p>
-<p><strong>NOTE:</strong> Driver build script <a class="reference download internal" download="" href="_downloads/ade9061638941c61910a410bb71e1116/dtk_nic_driver_build.sh"><code class="xref download docutils literal notranslate"><span class="pre">download</span></code></a></p>
-<p><strong>NOTE:</strong> Make sure the <cite>.sh</cite> files are executable by running <cite>chmod +x entrypoint.sh dtk_nic_driver_build.sh</cite></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Modification of <cite>D_OFED_SRC_DOWNLOAD_PATH</cite> must be tighdly coupled with corresponding update to entrypoint.sh script.</p>
-</div>
-</section>
-</section>
-</section>
 </section>
 
 
@@ -506,8 +395,8 @@ quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:dde3cd6a75d865a476aa7e1cab
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2024, NVIDIA.
-      <span class="lastupdated">Last updated on Aug 22, 2024.
+    <p>&#169; Copyright 2025, NVIDIA.
+      <span class="lastupdated">Last updated on May 29, 2025.
       </span></p>
   </div>
 
