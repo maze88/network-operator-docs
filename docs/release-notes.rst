@@ -36,39 +36,37 @@ Changes and New Features
 
    * - Version
      - Description
-   * - 25.7.0
+   * - 25.7.x
      - | - Added support for OpenShift v4.19.
        | - Added support for RHEL v9.6.
        | - Added support for optimized DOCA driver container handling on pod termination, reducing cleanup time and avoiding unnecessary reloads.
        | - Added support for NIC Configuration Operator on Red Hat OpenShift.
        | - Added support for BlueField Firmware Bundle upgrades for BlueField-3 SuperNICs with NIC Configuration Operator.
-   * - 25.4.0
+   * - 25.4.x
      - | - Added support for NVIDIA NIC Configuration Operator deployment through NicClusterPolicy CR, since using Helm chart will be deprecated in future releases.
        | - Integrate NVIDIA Network Operator with NVIDIA Maintenance Operator for DOCA-OFED Driver container upgrade.
        | - Added support for OpenShift 4.18.
        | - Added support for ConnectX-8 SuperNIC.
        | - Added support for NVIDIA Spectrum-X Operator deployment - Tech Preview.       
-   * - 25.1.0
+   * - 25.1.x
      - | - Added support for OpenShift Container Platform v4.17.
        | - Added support for SUSE Linux Enterprise Server 15 SP6 with Upstream K8s and Rancher.
        | - Added support for RHEL v9.5.
        | - Removed support for Ubuntu 20.04.
        | - Added support for NVIDIA Maintenance Operator deployment.
-   * - 24.10.1
+   * - 24.10.x
      - | - CVE fix (CVE-2024-45338).
-   * - 24.10.0
-     - | - Added support for NVIDIA NIC Configuration Operator deployment.
+       | - Added support for NVIDIA NIC Configuration Operator deployment.
        | - Added support for Support Single-Node OpenShift (SNO).
        | - NVIDIA Network Operator Helm chart does not create NicClusterPolicy CR anymore.
-   * - 24.7.0
+   * - 24.7.x
      - | - Added support for OpenShift Container Platform v4.16.
        | - Added support for NVIDIA Grace based ARM platforms with OpenShift Container Platform.
        | - Added support for RHEL v8.9, v8.10, v9.3 and v9.4 with Upstream K8s and Containerd runtime.
        | - Added support for Switchdev mode SR-IOV mode with OVS CNI with RHEL.
-   * - 24.4.1
+   * - 24.4.x
      - | - Fixed NVIDIA Network Operator images in OpenShift Container Platform bundle.
-   * - 24.4.0
-     - | - Added support for OpenShift Container Platform v4.15.
+       | - Added support for OpenShift Container Platform v4.15.
        | - Added support for Ubuntu 24.04.
        | - Added support for NVIDIA Grace based ARM platforms with Ubuntu 22.04 and Upstream K8s as a Tech Preview feature.
        | - Added support for NVIDIA IGX Orin based ARM platforms with Ubuntu 22.04 and Upstream K8s as a GA feature.
@@ -78,14 +76,14 @@ Changes and New Features
        | - Added support for network namespace isolation of RDMA devices with RDMA CNI
        | - Added support for RHEL and OpenShift deployments with Real-time kernels.
        | - Enhanced DOCA-OFED Driver container deployment and significantly reduced compilation time after node reboots.
-   * - 24.1.0
+   * - 24.1.x
      - | - Added support for Ubuntu 22.04 with Upstream K8s on ARM platforms (NVIDIA IGX Orin) - Tech Preview.
        | - Added support for CNI bin directory configuration.
        | - Added support for OpenShift MOFED/DOCA-OFED driver container build and deployment via driver toolkit (DTK).
        | - Added support for Ubuntu 22.04 deployments with Real-time kernels.
        | - Added the ability to disable SR-IOV VF for SR-IOV Network Operator (in systems with pre-configured SR-IOV).
        | - Added the ability to set resource request and limits on the network operator and it components.
-   * - 23.10.0
+   * - 23.10.x
      - | - Added support for OpenShift Container Platform v4.14.
        | - Added support for RHEL v8.8.
        | - Optimized SR-IOV NIC configuration time with Network Operator (vanilla Kubernetes only).
@@ -95,47 +93,47 @@ Changes and New Features
        | - Added support for NVIDIA BlueField-3 NIC mode.
        | - Added High-Availability and Leader election support for NV-IPAM.
        | - Added systemd mode support for SR-IOV Network Operator and MOFED container to optimize cluster/node startup time.
-   * - 23.7.0
+   * - 23.7.x
      - | - Added support for OpenShift Container Platform 4.13.
        | - Added support for RHEL 9.1 and 9.2 with CRI-O container runtime (Beta).
        | - Added support for NodeFeatureApi in Node Feature Discovery.
-   * - 23.5.0
+   * - 23.5.x
      - | - Added support for NVIDIA IPAM Plugin deployment.
        | - Added support for CRDs upgrade during NVIDIA Network Operator installation or upgrade.
-   * - 23.4.0
+   * - 23.4.x
      - | - Added support for Kubernetes >= 1.21 and <=1.27.
        | - Added support for NicClusterPolicy update and removal.
        | - Added support for OpenShift Container Platform 4.11 and 4.12.
-   * - 23.4.0
+   * - 23.4.x
      - | - Added a calendar versioning schema for Network Operator releases to better align with the NVIDIA GPU Operator.
        | - Added support for the following operating systems and Kubernetes environments:
        |     - RHEL 8.4 and 8.6 with CRI-O container runtime
        |     - Kubernetes >= 1.21 and <=1.26
        | - Added PKey configuration for IB networks with IB-Kubernetes.
        | - Added the ability to gracefully terminate the OFED container on DGX systems running Red Hat OpenShift.
-   * - 1.4.0
+   * - 1.4.x
      - | - Added support for Kubernetes >= 1.21 and <=1.25.
        | - Added support for Ubuntu 22.04.
        | - Added support for OpenShift Container Platform 4.11 including DGX platform.
        | - Added Beta support for PKey configuration for IB networks with IB-Kubernetes.
-   * - 1.3.0
+   * - 1.3.x
      - | - Added support for Kubernetes >= 1.17 and <=1.24.
        | - Added the option to use a single namespace to deploy Network Operator components.
        | - Added support for automatic MLNX OFED driver upgrade.
        | - Added support for IPoIB CNI.
        | - Added support for Air Gap deployment.
-   * - 1.2.0
+   * - 1.2.x
      - | - Added support for OpenShift Container Platform 4.10.
        | - Added extended selectors support for SR-IOV Device Plugin resources with Helm chart.
        | - Added Whereabouts IP reconciler support.
        | - Added BlueField2 NICs support for SR-IOV operator.
-   * - 1.1.0
+   * - 1.1.x
      - | - Added support for OpenShift Container Platform 4.9.
        | - Added support for Network Operator upgrade from v1.0.0.
        | - Added support for Kubernetes POD Security Policy.
        | - Added support for Kubernetes >= 1.17 and <=1.22.
        | - Added the ability to propagate nodeAffinity property from the NicClusterPolicy to Network Operator dependencies.
-   * - 1.0.0
+   * - 1.0.x
      - | - Added Node Feature Discovery that can be used to mark nodes with NVIDIA SR-IOV NICs.
        | - Added support for different networking models:
        |     - Macvlan Network
